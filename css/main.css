@@ -30,7 +30,7 @@ img{
 /* CONTAINER */
 .container {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1180px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
@@ -41,4 +41,97 @@ img{
 
 .main-content{
     flex-grow: 1;
+}
+
+.navigation {
+    background-color: #607D8B;
+    margin: 30px 0;
+    z-index: 100 ;
+}
+
+.navigation-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navigation-item {
+    flex-grow: 1;
+    position: relative;
+}
+
+.navigation-item:hover{
+    background-color: #78909C;
+}
+
+.navigation-link {
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 15px;
+    color: rgba(255, 255,255 , 0.6);
+  
+}
+.navigation-item:hover .navigation-link,
+.navigation-link:hover{
+    color:rgba(255, 255,255 , 1);
+}
+
+
+.active{
+    background-color: #78909C;
+    color:rgba(255, 255,255 , 1);
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    transition: all 1s ease;
+}
+
+.navigation-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu-link {
+    display: block;
+    padding:  10px;
+    text-decoration: none;
+    color:#fff;
+    background-color:#3f525b;
+    white-space: nowrap;
+}
+
+.dropdown-menu-link:hover{
+    background-color:#78909c;
+}
+
+/* ------------------------ */
+
+.others{
+    position: relative;
+ 
+}
+.others .navigation-link{
+    padding-left: 0 ;
+}
+
+/* Triangle */
+.others::after{
+    content:'';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    display: inline-block;
+    border-top:6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    right: 0px;
+    top:45%;
 }
